@@ -14,14 +14,7 @@ public class Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isFired)
-        {
-             timer +=Time.deltaTime;
-            while(timer > waitTimeToBurnTrigger)
-            {
-                gameObject.SetActive(false);
-            }
-        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
