@@ -21,6 +21,7 @@ public class Trigger : MonoBehaviour
         if(other.CompareTag("Fire"))
         {
             isFired = true;
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 }
