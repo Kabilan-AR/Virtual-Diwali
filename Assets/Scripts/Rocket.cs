@@ -9,7 +9,7 @@ public class Rocket : MonoBehaviour
     private bool canLaunch;
     private bool launched = false;
     private bool destroyed = false;
-    private float flyTime = 10f;
+    public float flyTime = 7f;
     private float timer = 0f;
 
     [SerializeField] private AudioClip launchSFX;
