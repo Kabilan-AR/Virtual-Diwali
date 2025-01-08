@@ -15,7 +15,7 @@ public class Lantern : MonoBehaviour
         lerpTime += Time.deltaTime;
         if(lerpTime>0.3f)
         {
-            float newY = Mathf.Lerp(currentHeight - 1, currentHeight + 1, Mathf.PingPong(lerpTime, 1));
+            float newY = Mathf.Lerp(currentHeight - 3, currentHeight + 3, Mathf.PingPong(lerpTime, 1));
             transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
        
