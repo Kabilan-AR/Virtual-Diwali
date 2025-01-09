@@ -819,7 +819,7 @@ PlayerSettings:
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
-  selectedPlatform: 0
+  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -827,8 +827,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Virtual Diwali(2)
-  metroPackageVersion: 
+  metroPackageName: VirtualDiwali2
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -836,7 +836,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Virtual Diwali(2)
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Virtual Diwali(2)
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
