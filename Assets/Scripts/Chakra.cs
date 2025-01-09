@@ -23,7 +23,7 @@ public class Chakra : MonoBehaviour
         psRenderer = sparkles.GetComponent<ParticleSystemRenderer>();
         trigger = GetComponentInChildren<Trigger>();
         rb = GetComponent<Rigidbody>();
-        rb.maxAngularVelocity = 15f;
+        rb.maxAngularVelocity = 50f;
         rb.angularDrag = 0.5f;  // Add angular drag to slow down rotation naturally
         sparkles.gameObject.SetActive(false);
         source = GetComponent<AudioSource>();
@@ -130,7 +130,7 @@ public class Chakra : MonoBehaviour
             }
             else if (currentIgntionLevel == 2)
             {
-                rb.AddTorque(Vector3.up * 15f);  // Increase torque at level 2
+                rb.AddTorque(Vector3.up * 20f);  // Increase torque at level 2
                 psRenderer.velocityScale = 0.25f;
                 psRenderer.lengthScale = 0.87f;
             }

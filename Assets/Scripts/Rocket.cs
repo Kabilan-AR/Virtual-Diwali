@@ -9,7 +9,7 @@ public class Rocket : MonoBehaviour
     private bool canLaunch;
     private bool launched = false;
     private bool destroyed = false;
-    public float flyTime = 7f;
+    public float flyTime = 5f;
     private float timer = 0f;
 
     [SerializeField] private AudioClip launchSFX;
@@ -53,7 +53,7 @@ public class Rocket : MonoBehaviour
     {
         launched = true;
         TrailVFX.gameObject.SetActive(true);
-        TrailVFX.startSpeed= timer*2f;
+        TrailVFX.startSpeed= timer*1.5f;
         if(!source.isPlaying)
         {
             source.clip = launchSFX;

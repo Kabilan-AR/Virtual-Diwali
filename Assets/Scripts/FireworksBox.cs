@@ -12,7 +12,8 @@ public class FireworksBox : MonoBehaviour
 
     private float soundTimer=1f;
     private AudioSource source;
-    private bool canLaunch;
+    [HideInInspector]public bool canLaunch;
+    private bool bufferFinish = false;
     private bool isFinished = false;
     void Start()
     {
@@ -24,8 +25,16 @@ public class FireworksBox : MonoBehaviour
     void Update()
     {
         canLaunch = trigger.isFired;
-
-        if(canLaunch && !isFinished)
+        if(canLaunch && !bufferFinish)
+        {
+            timer += Time.deltaTime;
+            if(timer>2f)
+            {
+                timer = 0f;
+                bufferFinish = true;
+            }
+        }
+        if(canLaunch && !isFinished && bufferFinish)
         {
             timer += Time.deltaTime;
             soundTimer += Time.deltaTime;

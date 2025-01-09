@@ -6,10 +6,9 @@ public class FlowerPot : MonoBehaviour
     private int total = 4;
     private int currentLevel = -1;
     private Trigger trigger;
-    private bool canStart;
+    [HideInInspector]public bool canStart;
     private bool destroyed = false;
 
-    private float totalLifetime = 10f;
     private float timeForEachLevel = 2f;
     private float timer = 0f;
 
@@ -35,6 +34,7 @@ public class FlowerPot : MonoBehaviour
             destructionProcess();
         }
     }
+   
     private void launchFountain()
     {
         if (currentLevel == -1)
@@ -45,19 +45,17 @@ public class FlowerPot : MonoBehaviour
         if(currentLevel == 0)
         {
             ignitionLevels[currentLevel].gameObject.SetActive(true);
-            Debug.Log("Level" + currentLevel);
-            ignitionLevels[currentLevel+1].gameObject.SetActive(true);
-            Debug.Log("Level" + currentLevel);
+            ignitionLevels[0].startSpeed = 0.5f;
+            ignitionLevels[currentLevel].gameObject.SetActive(true);
             if(timer>timeForEachLevel)
             {
                 currentLevel=2;
-                Debug.Log("Level" + currentLevel);
                 timer = 0f;
             }
         }
         if(currentLevel ==2)
         {
-            ignitionLevels[0].startSpeed = 6f;
+            ignitionLevels[0].startSpeed = 2f;
             ignitionLevels[2].gameObject.SetActive(true);
             if (timer > timeForEachLevel)
             {
@@ -67,7 +65,7 @@ public class FlowerPot : MonoBehaviour
         }
         if(currentLevel == 3)
         {
-            ignitionLevels[0].startSpeed =9f;
+            ignitionLevels[0].startSpeed =3f;
             ignitionLevels[3].gameObject.SetActive(true);
             if (timer > timeForEachLevel)
             {
